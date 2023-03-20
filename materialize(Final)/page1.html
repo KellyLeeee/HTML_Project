@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+  <html>
+  
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 
+    </head>
+
+    <body>
+	
+	
+	<nav>
+    <div class="nav-wrapper brown darken-3">
+      <a href="page1.html" class="brand-logo">Travel to Tainan</a>
+    </div>
+    </nav>
+    
+	<img class="materialboxed" width="100%" src="https://c1.staticflickr.com/1/594/23643212631_b74d6ec0a1_b.jpg">
+    
+	<ul id="demo" class="collapsible">	
+	</ul>
+	
+	    <footer class="page-footer brown darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Travel to Tainan</h5>
+                <p class="grey-text text-lighten-4">Welcome to Tainan!! Wish you have a nice trip~~</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 HTML Final
+            </div>
+          </div>
+        </footer>
+
+        
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  
+	    <script>	
+			
+			var a=["star_border","thumb_up","turned_in_not","location_on"];
+			
+			var b=["台南Tainan｜東區",
+				   "台南Tainan｜中西區",
+				   "台南Tainan｜安平區",
+				   "台南Tainan｜仁德區"];
+			
+			var c=["0",
+			       "1",
+				   "2",
+				   "3"];
+				   
+		    var d=["東區是臺灣臺南市37個行政區之一，在縣市合併之前，因位於原省轄臺南市東側而得名。區內大專院校與國中小遍布，有文教區之美譽；而國道一號、縱貫公路與臺鐵縱貫線等重要交通路線皆有通過本區、故商業機能亦極為發達。",
+			       "中西區是臺灣臺南市轄下37區之一，二次大戰後分設為臺南市「中區」及「西區」，兩區原以西門路為界，2004年1月1日起因為行政精簡需要將其合併，合稱為「中西區」。中西區一帶為漢人在臺灣最早開發的區域，自明鄭時期以來曾作為全臺政治中心近200年，至今仍為臺南市中心，以古蹟眾多、人文歷史豐富、及新舊混雜的景觀為顯著特色。",
+				   "安平區是臺灣臺南市三十七個行政區之一，為臺南市政府永華市政中心所在地，與新營區共為臺南市的行政中心。地理位置北以鹽水溪和安南區為界，東以民權路、中華西路與中西區相鄰，南則隔運河與南區毗鄰，西為臺灣海峽。區內北端為老安平聚落，為漢人最早開發地之一，在荷蘭時期時這裡建有大員市鎮，是臺灣最古老的市鎮，而「臺灣」之名也起源於「大員」（荷語：Tayouan），因此此區可說是臺灣歷史的起源地。",
+				   "仁德區位於臺灣臺南市西南端，東鄰歸仁區，西鄰東區、南區，南隔二仁溪與高雄市湖內區、路竹區相鄰，北接永康區。除西面有一丘陵地之外（銜接臺南台地），全境地勢低平。"];
+			      
+			var e="特色推薦"
+			
+			var text = "";
+			
+            var i;
+			
+            for (i = 0; i < a.length; i++) 
+			{
+                  text +=  '<li>';
+                  text +=  '<div class="collapsible-header">';
+                  text +=  '<i class="material-icons">';
+                  text +=  ' '+ a[i] +'</i>';
+                  text +=  ' '+ b[i] +'';
+				  text +=  '</div>';
+				  text +=  '<div class="collapsible-body" >';
+				  text +=  '<p> '+ d[i] +'</p>';
+				  text +=  '<p><a href="page2_1.html?pid='+ c[i] +'">';
+		   	      text +=  ' '+ e +' ';
+				  text +=  '</a>';
+			      text +=  '</p>';
+				  text +=  '</div>';
+				  text +=  '</li>';
+			}
+				  
+            document.getElementById("demo").innerHTML = text;
+
+			$(document).ready(function(){
+			$('.dropdown-trigger').dropdown();
+			$('.materialboxed').materialbox();
+		    $('.collapsible').collapsible();
+			$('.carousel').carousel();
+			});
+	    </script>
+	  
+    </body>
+  </html>

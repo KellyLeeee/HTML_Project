@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<iframe id="demo" src="#" width="100%" height="500">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+<p>
+
+</p>
+
+
+<script type="text/javascript">
+
+          // 取得網址裡的參數 
+		function GetUrlVar(VarName) 
+		{
+		  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+		  var regexS = "[\\?&]" + VarName + "=([^&#]*)";
+		  var regex = new RegExp(regexS);
+		  var results = regex.exec(window.location.href);
+		  if (results == null)
+		   	 return "";
+		  else
+			 return results[1];
+		}
+
+		  
+		  // 要先取得網址裡的路徑起點終點經緯度參數 
+		var x = decodeURIComponent(GetUrlVar('map'));
+		  
+        var url = 'http://maps.google.com.tw/maps?f=q&hl=zh-TW&q=' + x + '&z=16&t=q &output=embed';
+
+		var a = ["福記肉圓：701台南市東區崇德路475號",
+				 "蜷尾家：700台南市中西區正興街92號",
+				 "周氏蝦捲：708台南市安平區安平路408-1號",
+				 "台糖糖廠冰品：717台南市仁德區文華路二段290號"];
+				 
+		var i = ["22.974716,120.226703",
+				 "22.994350,120.197155",
+				 "22.998197,120.174598",
+				 "22.939161,120.229034"];
+		  
+        document.getElementById("demo").setAttribute("src", url);
+	 
+</script>
+
+
+</body>
+</html>

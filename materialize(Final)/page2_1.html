@@ -1,0 +1,217 @@
+<!DOCTYPE html> 
+  <html>
+
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 
+	 <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+
+   
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+	 
+
+    </head>
+	
+	<head>
+		
+	</head> 
+
+	<body> 
+	
+		<nav>
+			<div class="nav-wrapper brown darken-3">
+			  <a href="page1.html" class="brand-logo">Travel to Tainan</a>
+			  <ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="page2_1.html?pid=0">東區</a></li>
+				<li><a href="page2_1.html?pid=1">中西區</a></li>
+				<li><a href="page2_1.html?pid=2">安平區</a></li>
+				<li><a href="page2_1.html?pid=3">仁德區</a></li>
+			  </ul>
+			</div>
+		</nav>
+
+	<p>  </p>		
+		
+	<div id="demo">
+	
+	</div>
+
+          <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                items: 4,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 1000,
+                autoplayHoverPause: true
+              });
+            })
+			
+			var images =  new Array();
+			images[0] = "http://farm3.static.flickr.com/2007/32074944883_d0e00887db_c.jpg";
+			images[1] = "http://4.bp.blogspot.com/-Lii6lwkAcPI/VDO6oHzLCJI/AAAAAAAAJjs/IXIYpYmsmAw/s1600/%E5%8C%97%E9%96%80%E6%B0%B4%E6%99%B6%E6%95%99%E5%A0%82(%E7%85%A7%E7%89%87%E7%94%B1%E9%9B%B2%E5%98%89%E5%8D%97%E6%BF%B1%E6%B5%B7%E5%9C%8B%E5%AE%B6%E9%A2%A8%E6%99%AF%E5%8D%80%2B%E7%AE%A1%E7%90%86%E8%99%95%E6%8F%90%E4%BE%9B).jpg";
+			images[2] = "https://pic.pimg.tw/tainanlohas/1426511438-1331473383.jpg" ;
+			images[3] = "https://www.twtainan.net/image/17552/1024x768" ;
+			images[4] = "https://cc.tvbs.com.tw/news3.0/tvbs/news/travel/images/2015/12/11/11232955_1648301582117749_8494183335482783401_o.jpg" ;
+			images[5] = "http://1.bp.blogspot.com/-zGHXaFKeFQM/VIcGaGDkunI/AAAAAAAAJKw/SOMsnDSiPS8/s1600/DSC_5695.JPG" ;
+			images[6] = "https://c1.staticflickr.com/8/7057/6818005544_5753f68a64_b.jpg" ;
+			images[7] = "data:image/jpeg;base64,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" ;
+			images[8] = "https://www.owlting.com/p480w/place_photo_92105_d54e232f54b44d80f913275d120099ef";
+			images[9] = "https://test.twtainan.net/Utility/DisplayImage?id=17749";
+
+			str = '<div class="owl-carousel owl-theme">';
+			for (i=0;i<=9;i++)
+			{
+			str += '<div class="item">';
+			str += 	'<img src="' + images[i] + ' " />';
+			str += '</div>';
+			}
+			str += '</div>';
+			
+		    document.getElementById("demo").innerHTML = str;    
+
+          </script>
+		
+		
+		<p id="east">
+	
+	    </p>
+		
+		 
+		<script type="text/javascript"> 
+		
+		var a = ["https://pic.pimg.tw/kel8257/1494658373-66175097_n.jpg",
+		         "https://7ko.tw/img/XiR5170.jpg",
+				 "http://0.blog.xuite.net/0/d/3/8/21023217/blog_1220077/txt/21695406/5.jpg",
+				 "https://iphoto.ipeen.com.tw/photo/comment/3/1/0/cm20121122_362075_46680_6d2e3695d0ad8e68c7526bc726e6b01b592.jpg"];
+				 
+		var b = ["東洲黑糖奶",
+		         "金德春捲",
+				 "安平豆花",
+				 "丹丹漢堡"];
+				 
+		var c = ["0",
+			     "1",
+				 "2",
+				 "3"];
+		
+		var d = ["701台南市東區東寧路122號",
+		         "700台南市中西區民族路三段19號",
+				 "708台南市安平區安北路433號",
+				 "717台南市仁德區中山路272號"];
+				 
+		var e = ["http://sugar.easylife.tw/pics/201008/0815/IMG_6593.jpg",
+		         "http://6.blog.xuite.net/6/8/1/6/15336743/blog_1163313/txt/209875140/5.jpg",
+				 "https://img4.momoshop.com.tw/goodsimg/0004/623/321/4623321_B.jpg?t=1521389881",
+				 "http://e.blog.xuite.net/e/6/5/f/10189443/blog_2167639/txt/62380926/0.jpg"];
+		
+		var f = ["福記肉圓",
+		         "蜷尾家",
+				 "周氏蝦捲",
+				 "台糖糖廠冰品"];
+		
+		var g = ["701台南市東區崇德路475號",
+		         "700台南市中西區正興街92號",
+				 "708台南市安平區安平路408-1號",
+				 "717台南市仁德區文華路二段290號"];
+				 
+		var h = ["22.991782,120.221944",
+                 "22.997707,120.199076",
+				 "22.999957,120.153363",
+				 "22.970863,120.259718"];
+				 
+		var i = ["22.974716,120.226703",
+				 "22.994350,120.197155",
+				 "22.998197,120.174598",
+				 "22.939161,120.229034"];
+				 
+		var j = ["%E6%9D%B1%E6%B4%B2%E9%BB%91%E7%B3%96%E5%A5%B6",
+				 "%E9%87%91%E5%BE%B7%E6%98%A5%E6%8D%B2",
+				 "%E5%AE%89%E5%B9%B3%E8%B1%86%E8%8A%B1",
+				 "%E5%8F%B0%E5%8D%97%E4%BB%81%E5%BE%B7%E4%B8%B9%E4%B8%B9%E6%BC%A2%E5%A0%A1"];
+				 
+		var k = ["%E7%A6%8F%E8%A8%98%E8%82%89%E5%9C%93",
+				 "%E8%9C%B7%E5%B0%BE%E5%AE%B6",
+				 "%E5%91%A8%E6%B0%8F%E8%9D%A6%E6%8D%B2",
+				 "%E5%8F%B0%E5%8D%97%E4%BB%81%E5%BE%B7%E5%8F%B0%E7%B3%96%E7%B3%96%E5%BB%A0%E5%86%B0%E5%93%81"];
+		
+		var X = decodeURIComponent(GetUrlVar('pid'));
+		
+		function GetUrlVar(VarName) 
+			{
+			  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+			  var regexS = "[\\?&]" + VarName + "=([^&#]*)";
+			  var regex = new RegExp(regexS);
+			  var results = regex.exec(window.location.href);
+			  if (results == null)
+				 return "";
+			  else
+				 return results[1];
+			}
+		
+		var good = "";   
+				
+		    good += '<div class="card" style="width:44%;margin:0px auto">';
+			good += '<div class="card-image waves-effect waves-block waves-light">';
+			good += '<img class="activator" src="'+ a[X] +'">';
+			good += '</div>';
+			good += '<div class="card-content">';
+			good += '<span class="card-title activator grey-text text-darken-4" style="text-align:center">';
+			good += ''+  b[X] + '</span>';
+			good += '<p style="text-align:center"><a href="page3_1.html?map='+ h[X] +'">';
+			good += '' + d[X] + '</a></p>';
+			good += '<p style="text-align:center"><a href="page4_1.html?suggest='+ j[X] +'">';
+			good += '痞客邦好文推薦</a></p>';
+			good += '</div>';
+			good += '</div>';
+			good += '<p></p>';
+			good += '<div class="card" style="width:44%;margin:0px auto">';
+			good += '<div class="card-image waves-effect waves-block waves-light">';
+			good += '<img class="activator" src="'+ e[X] +'">';
+			good += '</div>';
+			good += '<div class="card-content">';
+			good += '<span class="card-title activator grey-text text-darken-4"style="text-align:center">';
+			good += ''+  f[X] + '</span>';
+			good += '<p style="text-align:center"><a href="page3_2.html?map='+ i[X] +'">';
+			good += '' + g[X] + '</a></p>';
+			good += '<p style="text-align:center"><a href="page4_2.html?suggest='+ k[X] +'">';
+			good += '痞客邦好文推薦</a></p>';
+			good += '</div>';
+			good += '</div>';		
+				
+        document.getElementById("east").innerHTML = good;
+		 
+		</script>
+		 
+		<footer class="page-footer brown darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Travel to Tainan</h5>
+                <p class="grey-text text-lighten-4">Welcome to Tainan!! Wish you have a nice trip~~</p>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 HTML Final
+            </div>
+          </div>
+        </footer>
+		
+	</body>
+
+  </html>

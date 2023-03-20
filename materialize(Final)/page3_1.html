@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<body>
+<iframe id="demo" src="#" width="100%" height="500">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+
+<script type="text/javascript">
+
+          // 取得網址裡的參數 
+		function GetUrlVar(VarName)
+		{
+		  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+		  var regexS = "[\\?&]" + VarName + "=([^&#]*)";
+		  var regex = new RegExp(regexS);
+		  var results = regex.exec(window.location.href);
+		  if (results == null)
+		   	 return "";
+		  else
+			 return results[1];
+		}
+
+		  
+		  // 要先取得網址裡的路徑起點終點經緯度參數 
+		var x = decodeURIComponent(GetUrlVar('map'));
+        
+		var a = ["東洲黑糖奶：701台南市東區東寧路122號",
+				 "金德春捲：700台南市中西區民族路三段19號",
+				 "安平豆花：708台南市安平區安北路433號",
+				 "丹丹漢堡：717台南市仁德區中山路272號"];
+				 
+		var h = ["22.991782,120.221944",
+                 "22.997707,120.199076",
+				 "22.999957,120.153363",
+				 "22.970863,120.259718"];
+				 
+		var url = 'http://maps.google.com.tw/maps?f=q&hl=zh-TW&q=' + x + '&z=16&t=q&output=embed';
+			
+			
+        document.getElementById("demo").setAttribute("src",url);
+		
+</script>
+
+</body>
+
+</html>
